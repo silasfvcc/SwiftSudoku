@@ -82,11 +82,40 @@ let time9x9Method2 = StopwatchBlock {
 }
 print("Method2 solved the 9x9 sample in \(time9x9Method2) seconds.\n")
 
-let time16x16Method2 = StopwatchBlock {
-    if let solution16x16 = Method2(board: board16x16) {
+//let time16x16Method2 = StopwatchBlock {
+//    if let solution16x16 = Method2(board: board16x16) {
+//        solution16x16.print()
+//    } else {
+//        print("16x16 sample has no solution.")
+//    }
+//}
+//print("Method2 solved the 16x16 sample in \(time16x16Method2) seconds.\n")
+
+print("\n––– MethodFirstLook ---\n")
+
+let time4x4MethodFirstLook = StopwatchBlock {
+    if let solution4x4 = MethodFirstLook(board: board4x4) {
+        solution4x4.print()
+    } else {
+        print("4x4 sample has no solution.")
+    }
+}
+print("MethodFirstLook solved the 4x4 sample in \(time4x4MethodFirstLook) seconds.\n")
+
+let time9x9MethodFirstLook = StopwatchBlock {
+    if let solution9x9 = MethodFirstLook(board: board9x9) {
+        solution9x9.print()
+    } else {
+        print("9x9 sample has no solution.")
+    }
+}
+print("MethodFirstLook solved the 9x9 sample in \(time9x9MethodFirstLook) seconds.\n")
+
+let time16x16MethodFirstLook = StopwatchBlock {
+    if let solution16x16 = MethodFirstLook(board: board16x16) {
         solution16x16.print()
     } else {
         print("16x16 sample has no solution.")
     }
 }
-print("Method2 solved the 16x16 sample in \(time16x16Method2) seconds.\n")
+print("MethodFirstLook solved the 16x16 sample in \(time16x16MethodFirstLook) seconds.\n")

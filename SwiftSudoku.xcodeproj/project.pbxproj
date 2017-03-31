@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E4498D51E738E35007396AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4498D41E738E35007396AE /* main.swift */; };
 		1E4498E01E738E74007396AE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4498DF1E738E74007396AE /* Board.swift */; };
-		1E4498E21E73903B007396AE /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4498E11E73903B007396AE /* Spot.swift */; };
 		1E4498E41E7393BD007396AE /* Method1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4498E31E7393BD007396AE /* Method1.swift */; };
+		1EB51B6B1E8ECBBD00C3A918 /* MethodFirstLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB51B6A1E8ECBBD00C3A918 /* MethodFirstLook.swift */; };
 		1EE8C71C1E7460D4008F6BD5 /* Method2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE8C71B1E7460D4008F6BD5 /* Method2.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,8 @@
 		1E4498D11E738E35007396AE /* SwiftSudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftSudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4498D41E738E35007396AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1E4498DF1E738E74007396AE /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		1E4498E11E73903B007396AE /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		1E4498E31E7393BD007396AE /* Method1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method1.swift; sourceTree = "<group>"; };
+		1EB51B6A1E8ECBBD00C3A918 /* MethodFirstLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodFirstLook.swift; sourceTree = "<group>"; };
 		1EE8C71B1E7460D4008F6BD5 /* Method2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,9 +67,9 @@
 			children = (
 				1E4498D41E738E35007396AE /* main.swift */,
 				1E4498DF1E738E74007396AE /* Board.swift */,
-				1E4498E11E73903B007396AE /* Spot.swift */,
 				1E4498E31E7393BD007396AE /* Method1.swift */,
 				1EE8C71B1E7460D4008F6BD5 /* Method2.swift */,
+				1EB51B6A1E8ECBBD00C3A918 /* MethodFirstLook.swift */,
 			);
 			path = SwiftSudoku;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Silas Schwarz";
 				TargetAttributes = {
 					1E4498D01E738E34007396AE = {
@@ -133,9 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB51B6B1E8ECBBD00C3A918 /* MethodFirstLook.swift in Sources */,
 				1E4498E41E7393BD007396AE /* Method1.swift in Sources */,
 				1E4498E01E738E74007396AE /* Board.swift in Sources */,
-				1E4498E21E73903B007396AE /* Spot.swift in Sources */,
 				1EE8C71C1E7460D4008F6BD5 /* Method2.swift in Sources */,
 				1E4498D51E738E35007396AE /* main.swift in Sources */,
 			);
@@ -229,6 +229,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};

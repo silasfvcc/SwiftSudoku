@@ -9,27 +9,20 @@
 import Foundation
 
 struct Board {
-    var contents: [[Spot]]
+    var contents: [[Int]]
     let n: Int
     let length: Int
     
     init(contents: [[Int]]) {
-        self.contents = [[Spot]]()
-        for row in 0 ..< contents.count {
-            var item = [Spot]()
-            for column in 0 ..< contents.count {
-                item.append(Spot(value: contents[row][column]))
-            }
-            self.contents.append(item)
-        }
-        self.n = Int(sqrt(Double(contents.count)))
+        self.contents = contents
+        self.n = Int(sqrt(Double(self.contents.count)))
         self.length = n * n
     }
     
     func print() {
         for row in contents {
             for item in row {
-                Swift.print("\(item.value),", terminator: "")
+                Swift.print("\(item),", terminator: "")
             }
             Swift.print()
         }
@@ -44,11 +37,11 @@ struct Board {
             let blockX = (i % n) * n
             let blockY = (i / n) * n
             for j in 0 ..< length {
-                rowSet.remove(contents[i][j].value)
-                columnSet.remove(contents[j][i].value)
-                blockSet.remove(contents[blockX + j % n][blockY + j / n].value)
+                rowSet.remove(contents[i][j])
+                columnSet.remove(contents[j][i])
+                blockSet.remove(contents[blockX + j % n][blockY + j / n])
             }
-            if rowSet.count + columnSet.count + blockSet.count != 0 {
+            guard rowSet.count + columnSet.count + blockSet.count == 0 else {
                 return false
             }
         }

@@ -12,9 +12,9 @@ func Method1(board: Board) -> Board? {
     var board = board
     for row in 0 ..< board.length {
         for column in 0 ..< board.length {
-            if board.contents[row][column].value == 0 {
+            if board.contents[row][column] == 0 {
                 for possible in 1...board.length {
-                    board.contents[row][column].value = possible
+                    board.contents[row][column] = possible
                     if let solution = Method1(board: board) {
                         return solution
                     }
